@@ -4,7 +4,11 @@ document.addEventListener("keydown", function (event) {
   event.preventDefault();
   if (event.code === "F12") {
     alert("Не так просто!");
-  } else if (event.ctrlKey && event.shiftKey && event.code === "KeyI") {
+  } else if (
+    (event.ctrlKey || event.metaKey) &&
+    event.shiftKey &&
+    event.code === "KeyI"
+  ) {
     alert("Каков хитрец :)");
   }
 });
